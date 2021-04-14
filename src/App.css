@@ -1,5 +1,33 @@
+html{
+	height:100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.gift{
+	color: #fff;
+	font-size:70px;
+	position: absolute;
+	bottom: 250px;
+}
+
+.loader{
+	margin: auto !important;
+  position: absolute !important;
+  top: 0; left: 0; bottom: 0; right: 0 !important;
+  
+}
 .App {
+	position:relative !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction:column;
+	height:100vh;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('./components/img/bg.jpg');
+  background-size: cover;
 }
 
 .App-logo {
@@ -35,4 +63,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@-webkit-keyframes hvr-buzz {
+    50% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+}
+
+@keyframes hvr-buzz {
+    50% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+}
+
+.gift {
+    display: inline-block;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.gift:hover,
+.gift:focus,
+.gift:active {
+
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.50s;
+    animation-duration: 0.50s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 940px) {
+	.gift{
+	color: #fff;
+	font-size:60px;
+	position: absolute;
+	bottom: 250px;
+}
+}
+
+@media only screen and (max-width: 800px) {
+	.gift{
+	color: #fff;
+	font-size:50px;
+	position: absolute;
+	bottom: 300px;
+}
+}
+@media only screen and (max-width: 620px) {
+	.gift{
+	color: #fff;
+	font-size:35px;
+	position: absolute;
+	bottom: 350px;
+}
+}
+
+@media only screen and (max-width: 450px) {
+
 }

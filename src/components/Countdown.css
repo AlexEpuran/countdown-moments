@@ -1,0 +1,106 @@
+.countdown {
+	grid-area: countdown;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(50px, 150px));
+	grid-gap: 10px;
+	padding-bottom: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+/* .countdown div:not(:last-child) {
+	border-right: 2px solid #fff;
+
+} */
+
+.countdown-segment {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr;
+}
+
+.countdown-segment-number {
+	color: #fff;
+	font-size: 26px;
+	font-weight: 900;
+	transition: all 0.8s ease-in;
+}
+
+.countdown-segment-number:hover {
+	transform: scale(1.2) !important;
+}
+
+.countdown-segment-caption {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 940px) {
+	.countdown {
+		grid-area: countdown;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(30px, 120px));
+		grid-gap: 5px;
+		padding-bottom: 0px;
+		justify-content: center;
+		align-items: center;
+	}
+	.countdown-segment-number {
+		color: #fff;
+		font-size: 23px;
+		font-weight: 900;
+		transition: all 0.8s ease-in;
+	}
+	.countdown-segment-caption {
+		color: #fff;
+		font-size: 13px;
+		font-weight: 700;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.countdown {
+		grid-area: countdown;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(20px, 100px));
+		grid-gap: 5px;
+		padding-bottom: 0px;
+		justify-content: center;
+		align-items: center;
+	}
+	.countdown-segment-number {
+		color: #fff;
+		font-size: 20px;
+		font-weight: 900;
+		transition: all 0.8s ease-in;
+	}
+	.countdown-segment-caption {
+		color: #fff;
+		font-size: 10px;
+		font-weight: 700;
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	.countdown {
+		grid-area: countdown;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(10px, 70px));
+		grid-gap: 5px;
+		padding-bottom: 0px;
+		justify-content: center;
+		align-items: center;
+	}
+	.countdown-segment-number {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 900;
+		transition: all 0.8s ease-in;
+	}
+	.countdown-segment-caption {
+		color: #fff;
+		font-size: 9px;
+		font-weight: 700;
+	}
+}
